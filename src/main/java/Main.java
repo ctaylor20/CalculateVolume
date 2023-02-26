@@ -32,10 +32,10 @@ class Sphere extends Shape {
 class Cube extends Shape {
 
 
-    public double getVolume(int length) {
+    public double getVolume(int width) {
 
-        // The volume of a cube is the length of one side, cubed
-        double volume = length * length * length;
+        // The volume of a cube is the width of one side, cubed
+        double volume = width * width * width;
 
         // Format volume to 2 decimal places
         double formattedVolume = convertToTwoDecimalPlaces(volume);

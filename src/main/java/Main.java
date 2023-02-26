@@ -2,6 +2,12 @@ abstract class Shape {
 
     abstract double getVolume(int length);
 
+    public double convertToTwoDecimalPlaces(double volume) {
+
+        String formattedVolume = String.format("%.2f", volume);
+        return Double.parseDouble(formattedVolume);
+    }
+
 }
 
 class Sphere extends Shape {
@@ -15,9 +21,11 @@ class Sphere extends Shape {
         double fourByThree = 4.0 / 3.0;
         double piTimesRadiusCubed = pi * radiusCubed;
         double volume = fourByThree * piTimesRadiusCubed;
-        System.out.println("The volume of the sphere is " + volume);
 
-        return volume;
+        // Format volume to 2 decimal places
+        double formattedVolume = convertToTwoDecimalPlaces(volume);
+        System.out.println("The volume of the sphere is " + formattedVolume);
+        return formattedVolume;
     }
 }
 
@@ -28,9 +36,11 @@ class Cube extends Shape {
 
         // The volume of a cube is the length of one side, cubed
         double volume = length * length * length;
-        System.out.println("The volume of the " + volume);
 
-        return volume;
+        // Format volume to 2 decimal places
+        double formattedVolume = convertToTwoDecimalPlaces(volume);
+        System.out.println("The volume of the " + formattedVolume);
+        return formattedVolume;
     }
 
 }
@@ -46,11 +56,12 @@ class Tetrahedron extends Shape {
         double denominator = 6.0 * squareRoot2;
 
         double volume = edgeCubed / denominator;
-        System.out.println("The volume of a tetrahedron is " + volume);
 
-        return volume;
+        // Format volume to 2 decimal places
+        double formattedVolume = convertToTwoDecimalPlaces(volume);
+        System.out.println("The volume of a tetrahedron is " + formattedVolume);
+        return formattedVolume;
     }
-
 }
 
 

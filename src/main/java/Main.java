@@ -39,7 +39,7 @@ class Cube extends Shape {
 
         // Format volume to 2 decimal places
         double formattedVolume = convertToTwoDecimalPlaces(volume);
-        System.out.println("The volume of the cube" + formattedVolume);
+        System.out.println("The volume of the cube is " + formattedVolume);
         return formattedVolume;
     }
 
